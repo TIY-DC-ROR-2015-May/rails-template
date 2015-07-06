@@ -14,6 +14,7 @@ end
 comment_lines "Gemfile", /sqlite/
 gem_group :development do
   gem 'sqlite3'
+  gem 'binding_of_caller'
 end
 gem_group :production do
   gem 'pg'
