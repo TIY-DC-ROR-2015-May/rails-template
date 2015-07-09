@@ -8,6 +8,7 @@ gem 'pry-rails'
 gem_group :development do
   gem 'better_errors'
   gem 'did_you_mean'
+  gem 'binding_of_caller'
 end
 
 # Move sqlite3 to development
