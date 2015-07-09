@@ -8,13 +8,13 @@ gem 'pry-rails'
 gem_group :development do
   gem 'better_errors'
   gem 'did_you_mean'
+  gem 'binding_of_caller'
 end
 
 # Move sqlite3 to development
 comment_lines "Gemfile", /sqlite/
 gem_group :development do
   gem 'sqlite3'
-  gem 'binding_of_caller'
 end
 gem_group :production do
   gem 'pg'
