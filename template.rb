@@ -34,4 +34,6 @@ after_bundle do
   git :init
   git add: "."
   git commit: "-m 'Initial commit'"
+
+  rake "db:migrate"
 end
