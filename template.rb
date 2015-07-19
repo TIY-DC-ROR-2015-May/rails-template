@@ -37,15 +37,16 @@ after_bundle do
   git commit: "-m 'Initial commit'"
 end
 
-inject_into_file 'config/environments/test' do
+inject_into_file 'config/environments/test' "do
   config.ater_initialize do
     Bullet.enable = true
     Bullet.raise =true
   end
-end
+end"
 
-inject_into_file 'config/enviroments/development' do
+inject_into_file 'config/enviroments/development' "do
   config.after_initialize do
     Bullet.enable = true
     Bullet.add_footer = true
-end
+  end
+end"
