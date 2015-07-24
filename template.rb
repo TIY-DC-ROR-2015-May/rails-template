@@ -9,6 +9,8 @@ gem_group :development do
   gem 'better_errors'
   gem 'did_you_mean'
   gem 'binding_of_caller'
+  gem 'bullet'
+  gem 'factory_girl'
 end
 
 # Move sqlite3 to development
@@ -37,3 +39,17 @@ after_bundle do
 
   rake "db:migrate"
 end
+
+inject_into_file 'config/environments/test' "do
+  config.ater_initialize do
+    Bullet.enable = true
+    Bullet.raise =true
+  end
+end"
+
+inject_into_file 'config/enviroments/development' "do
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.add_footer = true
+  end
+end"
