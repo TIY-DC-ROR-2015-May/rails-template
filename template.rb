@@ -10,6 +10,7 @@ gem_group :development do
   gem 'did_you_mean'
   gem 'binding_of_caller'
   gem 'bullet'
+  gem 'factory_girl'
 end
 
 # Move sqlite3 to development
